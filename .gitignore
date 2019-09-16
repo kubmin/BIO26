@@ -3,6 +3,7 @@
 /client/dist
 /server/datasets
 /server/data
+/server/env
 
 # local env files
 .env.local
