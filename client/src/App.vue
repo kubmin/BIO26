@@ -1,0 +1,27 @@
+<template>
+  <div id="bio-26">
+    <router-view/>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'BIO26',
+}
+</script>
+
+<style>
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+#bio-26 {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+  height: 100%;
+}
+</style>
