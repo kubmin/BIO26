@@ -1,6 +1,6 @@
 # BIO26 App
 
-[![BIO 26 App](https://i.imgur.com/KiDAD3Y.jpg)](https://www.youtube.com/watch?v=cFHTQ0yzrnE "BIO 26 App")
+[![BIO 26 App](https://i.imgur.com/SK2QXvL.jpg)](https://www.youtube.com/watch?v=cFHTQ0yzrnE "BIO 26 App")
 
 This repository contains all the files for the **BIO26 – Library Team app**. The **client** (work in progress) is made with [Vue.js](https://vuejs.org/) and talks to the [Flask](https://palletsprojects.com/p/flask/) **server** (work in progress), which runs the [image-path](https://github.com/ml4a/ml4a-guides/blob/master/notebooks/image-path.ipynb) **algorithm** and returns the result back to the **client**.
 
