@@ -11,7 +11,7 @@
   <div class="grid-container">
     <div
       class="grid-item"
-      v-for="(image, index) in images"
+      v-for="image in images"
       :key="image.id"
     >
       <div class="grid-image">
@@ -120,5 +120,12 @@ export default {
   object-fit: cover;
   max-width: 100%;
   max-height: 100%;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
 }
 </style>
