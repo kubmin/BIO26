@@ -2,7 +2,7 @@
   <div class="wrapper">
     <div class="image-wrap">
       <div v-for="(image, index) in images" :key="index" @click="select(image)">
-        <img ref="image" v-images-loaded="loaded" :src="'http://localhost:5000/' + image.url" :class="{ selected: firstIdx.id == image.id || secondIdx.id == image.id }"/>
+        <img ref="image" v-images-loaded="loaded" :src="path + image.url" :class="{ selected: firstIdx.id == image.id || secondIdx.id == image.id }"/>
         {{ image.id }}
       </div>
     </div>
@@ -13,12 +13,11 @@
 import axios from 'axios'
 import imagesLoaded from 'vue-images-loaded'
 
-const path = 'http://localhost:5000/'
-
 export default {
   name: 'ImagesFex',
   data() {
     return {
+      path: 'http://92.111.10.191:5000/',
       load: false,
       images: [],
       selectedItems: 0,
@@ -36,7 +35,7 @@ export default {
     imagesLoaded
   },
   created() {
-    axios.get(path)
+    axios.get(this.path)
     .then((res) => {
       this.images = res.data
     })
@@ -71,7 +70,7 @@ export default {
 
         axios({
           method: 'post',
-          url: 'http://localhost:5000/nn',
+          url: this.path + 'nn',
           data: bodyFormData,
           config: { headers: {'Content-Type': 'multipart/form-data' }}
         })

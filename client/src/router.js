@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import ImagesFlex from './components/ImagesFlex.vue'
+import ImagesGrid from './components/ImagesGrid.vue'
 
 Vue.use(Router);
 
@@ -10,8 +10,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'ImagesFlex',
-      component: ImagesFlex,
+      name: 'ImagesGrid',
+      component: ImagesGrid,
     },
   ],
 });

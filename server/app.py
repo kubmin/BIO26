@@ -25,7 +25,7 @@ images, graph = pickle.load(open('data/graph_images_30knn.p', 'rb'))
 @app.route('/', methods=['GET'])
 def random_images():
     image_list = []
-    for _ in range(8):
+    for _ in range(16):
         idx = int(len(images) * random.random())
         data = { 'id': idx, 'url': images[idx] }
         image_list.append(data)
@@ -68,4 +68,4 @@ def download(filename):
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host="0.0.0.0", port=5000, debug=True)
