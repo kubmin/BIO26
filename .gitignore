@@ -4,6 +4,8 @@
 /server/datasets
 /server/data
 /server/env
+/tools/
+/tools/*
 
 # local env files
 .env.local

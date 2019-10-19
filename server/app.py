@@ -60,10 +60,10 @@ def nearest_neighbour():
 
     return jsonify(results_image)
 
-@app.route('/datasets/images/<path:filename>', methods=['GET', 'POST'])
+@app.route('/datasets/bio/<path:filename>', methods=['GET', 'POST'])
 def download(filename):
     print(filename)
-    return send_from_directory(directory='datasets/images/', filename=filename)
+    return send_from_directory(directory='datasets/bio/', filename=filename)
 
 
 
