@@ -61,6 +61,10 @@ export default {
         array[index] = array[index].replace(']', '')
       }
 
+      array[0] = array[0].replace(/_/g, ':')
+      array[1] = array[1].replace(/_/g, ' ')
+      array[2] = '(' + array[2] + ')'
+
       return array
 
     },

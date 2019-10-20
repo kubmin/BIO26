@@ -20,9 +20,9 @@
           </div>
         </div>
         <div class="grid-meta">
-          {{ title(image.url)[0] }}<br>
-          {{ title(image.url)[1] }}<br>
+          {{ title(image.url)[1] }}
           {{ title(image.url)[2] }}<br>
+          {{ title(image.url)[0] }}
         </div>
       </div>
     </div>
@@ -77,43 +77,22 @@ export default {
         array[index] = array[index].replace(']', '')
       }
 
+      array[0] = array[0].replace(/_/g, ':')
+      array[1] = array[1].replace(/_/g, ' ')
+      array[2] = '(' + array[2] + ')'
+
       return array
 
     },
     /*
       Select images using the sensors. Takes a port and value as input.
     */
-    hardwareSelect(port, value) {
+    hardwareSelect(value) {
       // Value is 1, which means a sensor has been triggered
-      if (value == 1) {
-        if (this.selected == 0) {
-          // find out wich sensor has triggered wich image id
-          this.sIdx = this.images[port].id
-          // toggle second selection
-          this.selected++
-        }
-        // Ready for the second selection
-        else if (this.selected == 1) {
-            // find out wich sensor has triggered wich image id
-            this.eIdx = this.images[port].id
-            // check if first index is not the same as last index
-            if (this.sIdx != this.eIdx) {
-              // reset selection toggler
-              this.selected = 0
+      if (value == 255) {
 
-              // calculate closest path between the two image indexes
-              this.$router.push({ name: 'Result', params: { sIdx: this.sIdx, eIdx: this.eIdx } })
-
-              // reset indexes for next selection
-              this.sIdx = null
-              this.eIdx = null
-            }
-            // selected two the same indexes, reset last selection
-            else {
-              this.eIdx = null
-            }
-        }
       }
+
     },
     select(image) {
       if (this.selected == 0) {
