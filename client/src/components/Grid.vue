@@ -1,9 +1,8 @@
 <template lang="html">
   <div class="grid-container">
     <div class="hardware">
-      Port: <input v-model="port"/>
-      Value: <input v-model="value"/>
-      <button @click="hardwareSelect(port, value)">Send</button>
+      Value (number): <input v-model="value"/> {{ number }}
+      <button @click="hardwareSelect(value)">Send</button>
     </div>
 
     <div
@@ -47,6 +46,7 @@ export default {
       selected: 0,
       value: null,
       port: null,
+      number: null,
       socket: io('localhost:3001'),
     }
   },
@@ -88,6 +88,8 @@ export default {
       Select images using the sensors. Takes a port and value as input.
     */
     hardwareSelect(value) {
+      this.number = value
+
       if (!this.selected) {
         if (value == 250) {
           this.$router.push({ name: 'Result', params: { sIdx: this.images[0].id, eIdx: this.images[1].id } })
@@ -137,7 +139,6 @@ export default {
   background-color: rgba(255, 255, 255, 0.8);
   font-size: 12px;
   text-align: center;
-  border: solid black 1px;
 }
 .grid-wrapper {
   display: flex;
@@ -153,7 +154,6 @@ export default {
   align-items: center;
   height: 100%;
   width: 100%;
-  background-color: lightpink;
 }
 .grid-image > div {
   height: 100%;
@@ -164,10 +164,6 @@ export default {
   max-width: 100%;
   max-height: 100%;
 }
-.grid-meta {
-  background-color: lightblue;
-}
-
 .fade-enter-active, .fade-leave-active {
   transition: opacity 1s;
 }
