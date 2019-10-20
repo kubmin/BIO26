@@ -28,6 +28,8 @@
 </template>
 
 <script>
+import io from 'socket.io-client'
+
 import axios from 'axios'
 import GridImage from './GridImage.vue'
 
@@ -43,6 +45,7 @@ export default {
       selected: 0,
       value: null,
       port: null,
+      socket: io('localhost:3001'),
     }
   },
   components: {
@@ -55,6 +58,11 @@ export default {
     })
     .catch((error) => {
       alert(error)
+    })
+  },
+  mounted() {
+    this.socket.on('DATA', (data) => {
+      console.log(data)
     })
   },
   methods: {

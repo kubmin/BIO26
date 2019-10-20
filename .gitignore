@@ -1,9 +1,10 @@
 .DS_Store
+/i2c/node_modules
 /client/node_modules
 /client/dist
-/server/datasets
-/server/data
-/server/env
+/api/datasets
+/api/data
+/api/env
 /tools/
 /tools/*
 
