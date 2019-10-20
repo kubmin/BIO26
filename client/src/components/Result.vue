@@ -7,13 +7,19 @@
           v-for="(image, index) in images"
           :key="index"
         >
-          <div class="grid-image">
-              <GridImage
-                :url="path + image.url"
-              />
+          <div class="grid-wrapper">
+            <div class="grid-image">
+              <div>
+                <GridImage
+                  :url="path + image.url"
+                />
+              </div>
+            </div>
+            <div class="grid-meta">
               {{ title(image.url)[0] }}<br>
               {{ title(image.url)[1] }}<br>
               {{ title(image.url)[2] }}<br>
+            </div>
           </div>
         </div>
       </div>

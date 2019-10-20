@@ -20,7 +20,9 @@
           </div>
         </div>
         <div class="grid-meta">
-          <span>Hello</span>
+          {{ title(image.url)[0] }}<br>
+          {{ title(image.url)[1] }}<br>
+          {{ title(image.url)[2] }}<br>
         </div>
       </div>
     </div>
@@ -66,6 +68,18 @@ export default {
     })
   },
   methods: {
+    title(value) {
+      var index
+      var array = value.match(/\[.*?\]/g)
+
+      for (index in array) {
+        array[index] = array[index].replace('[', '')
+        array[index] = array[index].replace(']', '')
+      }
+
+      return array
+
+    },
     /*
       Select images using the sensors. Takes a port and value as input.
     */
