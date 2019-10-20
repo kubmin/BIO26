@@ -64,7 +64,7 @@ export default {
   },
   mounted() {
     this.socket.on('DATA', (data) => {
-      console.log(data)
+      this.hardwareSelect(data)
     })
   },
   methods: {
@@ -88,11 +88,12 @@ export default {
       Select images using the sensors. Takes a port and value as input.
     */
     hardwareSelect(value) {
-      // Value is 1, which means a sensor has been triggered
-      if (value == 255) {
-
+      if (!this.selected) {
+        if (value == 250) {
+          this.$router.push({ name: 'Result', params: { sIdx: this.images[0].id, eIdx: this.images[1].id } })
+          this.selected = true
+        }
       }
-
     },
     select(image) {
       if (this.selected == 0) {
