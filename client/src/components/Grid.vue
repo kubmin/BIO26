@@ -38,7 +38,7 @@ export default {
   name: 'ImagesFex',
   data() {
     return {
-      path: 'http://192.168.0.34:5000/',
+      path: 'http://192.168.0.97:5000/',
       bodyFormData: new FormData(),
       images: [],
       sIdx: null,
@@ -63,8 +63,17 @@ export default {
     })
   },
   mounted() {
-    this.socket.on('DATA', (data) => {
-      this.hardwareSelect(data)
+    this.socket.on('20_00', (data) => {
+      console.log(data.data)
+    })
+    this.socket.on('20_01', (data) => {
+      console.log(data.data)
+    })
+    this.socket.on('24_00', (data) => {
+      console.log(data.data)
+    })
+    this.socket.on('24_01', (data) => {
+      console.log(data.data)
     })
   },
   methods: {

@@ -18,14 +18,28 @@ io.on('connection', (socket) => {
         callback();
 })
 
+//callback()
 
 function callback() {
-	if (toggle == false) {
-		io.emit('DATA', i2c.readByteSync(0x20, 0x00));
-		toggle = true;
-	} else {
-		io.emit('DATA', i2c.readByteSync(0x20, 0x01));
-		toggle = false;
-	}
+	io.emit('24_00', {
+		channel: 24,
+		value: 00,
+		data: i2c.readByteSync(0x24, 0x00)
+	});
+	io.emit('24_01', {
+		channel: 24,
+		value: 01,
+		data: i2c.readByteSync(0x24, 0x01)
+	});
+	io.emit('20_00', {
+		channel: 20,
+		value: 00,
+		data:  i2c.readByteSync(0x20, 0x00)
+	});
+	io.emit('20_01', {
+		channel: 20,
+		value: 01,
+		data: i2c.readByteSync(0x20, 0x01)
+	});
 	setTimeout(callback, 100)
 }
