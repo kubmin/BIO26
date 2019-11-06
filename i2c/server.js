@@ -7,6 +7,7 @@ const FormData = require('form-data')
 
 const app = express()
 const i2c = new I2C()
+const path = 'http://192.168.0.53:5000/'
 
 var sensorZero, sensorOne, sensorTwo, sensorThree, triggeredSensors, images
 
@@ -17,7 +18,7 @@ function getRandomSelection() {
 	// Calculates a random new image sequence using the api
 	console.log('Retrieving random selection')
 
-	axios.get('http://192.168.1.70:5000/')
+	axios.get(path)
 	.then((response) => {
 		images = response.data
 		console.log(images)
@@ -38,7 +39,7 @@ function getNNSelection(indexes) {
 	form.append(0, indexes[0])
 	form.append(1, indexes[1])
 
-	axios.post('http://192.168.1.70:5000/nn', form, {
+	axios.post(path + 'nn', form, {
 		headers: form.getHeaders(),
 	})
 	.then(response => {
@@ -714,7 +715,7 @@ function getSensorData() {
 	if (triggered == true && sensorZero == 255 && sensorOne == 255 && sensorTwo == 255 && sensorThree == 255) {
 		// Reset image sequence
 		console.log('reset')
-    axios.get('http://192.168.1.70:5000/')
+    axios.get(path)
     .then((response) => {
     	images = response.data
       console.log(images)
@@ -750,7 +751,7 @@ io.on('connection', (socket) => {
 	// maybe this client counter also needs to be implemented here
 	console.log('client connected')
 	socket.emit('init', images)
-	
+
 	getSensorData()
 
 	socket.on('calculateN', (data) => {

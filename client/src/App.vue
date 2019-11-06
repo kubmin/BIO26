@@ -51,6 +51,7 @@ export default {
       // console.log(this.images)
     })
     this.socket.on('init', (data) => {
+      console.log('init');
       this.$store.commit('setter', ['images', data])
     })
     this.socket.on('sensorData', (data) => {
