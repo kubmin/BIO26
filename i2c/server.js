@@ -20,12 +20,13 @@ function shuffle(array) {
 
 function array_move(arr, old_index, new_index) {
   if (new_index >= arr.length) {
-    var k = new_index - arr.length + 1;
+    var k = new_index - arr.length + 1
     while (k--) {
-        arr.push(undefined);
+        arr.push(undefined)
     }
   }
-  arr.splice(new_index, 0, arr.splice(old_index, 1)[0]);
+  arr.splice(new_index, 0, arr.splice(old_index, 1)[0])
+	return arr
 }
 
 function getRandomSelection() {
@@ -75,12 +76,12 @@ function getNNSelection(indexes) {
 		// find new position of the first selected image
 		var firstNewPos = shuffeled_array.findIndex(x => x.id === indexes[0])
 		// move the first selected image to the same place
-		array_move(shuffeled_array, triggeredSensors[0], firstNewPos)
+		var sorted_array = array_move(shuffeled_array, triggeredSensors[0], firstNewPos)
 
 		// find new position of the second selected image
 		var secondNewPos = shuffeled_array.findIndex(x => x.id === indexes[1])
 		// move the second selected image to the same place
-		array_move(shuffeled_array, triggeredSensors[1], secondNewPos)
+		sorted_array = array_move(sorted_array, triggeredSensors[1], secondNewPos)
 
 		console.log('old positions')
 		console.log(triggeredSensors)
@@ -88,9 +89,13 @@ function getNNSelection(indexes) {
 		console.log('new positions')
 		console.log([firstNewPos, secondNewPos])
 
+		console.log('shuffeled')
 		console.log(shuffeled_array)
 
-		images = shuffeled_array
+		console.log('sorted')
+		console.log(sorted_array)
+
+		images = sorted_array
 
 		io.emit('setImages', images)
 
@@ -809,7 +814,7 @@ io.on('connection', (socket) => {
 		if (counter === 3) {
 			console.log('send');
 			console.log(counter)
-			getNNSelection(data)
+			(data)
 			counter = 0
 		} else if (counter < 3) {
 			counter++
