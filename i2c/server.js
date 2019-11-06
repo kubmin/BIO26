@@ -74,7 +74,7 @@ function getNNSelection(indexes) {
 		var secondNewPos = shuffeled_array.findIndex(x => x.id === indexes[1])
 
 
-		images = new_array
+		images = shuffeled_array
 
 		io.emit('setImages', images)
 
