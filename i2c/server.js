@@ -714,12 +714,11 @@ function getSensorData() {
 	// All the sensors are not active
 	if (triggered == true && sensorZero == 255 && sensorOne == 255 && sensorTwo == 255 && sensorThree == 255) {
 		// Reset image sequence
-		console.log('reset')
+		console.log('Reset sequence')
     axios.get(path)
     .then((response) => {
     	images = response.data
-      console.log(images)
-    	io.emit('setImages', images)
+    	io.emit('reset', images)
 		})
 	  .catch((error) => {
     	console.log(error)
@@ -749,8 +748,8 @@ const io = require('socket.io')(server, {
 
 io.on('connection', (socket) => {
 	// maybe this client counter also needs to be implemented here
-	console.log('client connected')
-	socket.emit('init', images)
+	console.log('Client connected')
+	socket.emit('reset', images)
 
 	getSensorData()
 

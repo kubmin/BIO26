@@ -33,6 +33,7 @@ export default {
   },
   created() {
     this.socket.on('setImages', (data) => {
+      console.log('calculate');
       var first = data[0].id
       var last = data[data.length - 1].id
 
@@ -50,7 +51,7 @@ export default {
       this.$store.commit('setter', ['images', data])
       // console.log(this.images)
     })
-    this.socket.on('init', (data) => {
+    this.socket.on('reset', (data) => {
       console.log('init');
       this.$store.commit('setter', ['images', data])
     })
