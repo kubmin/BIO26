@@ -51,7 +51,7 @@ function getNNSelection(indexes) {
 		console.log('triggeredSensors')
 		console.log(triggeredSensors)
 		console.log('image positions')
-		console.log(data)
+		console.log(indexes)
 	})
 	.catch((error) => {
 		console.log(error)
