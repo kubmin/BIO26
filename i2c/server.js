@@ -762,7 +762,7 @@ io.on('connection', (socket) => {
 			console.log(counter)
 			getNNSelection(data)
 			counter = 0
-		} else (counter < 3) {
+		} else if (counter < 3) {
 			counter++
 		}
 	})
