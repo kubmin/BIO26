@@ -64,6 +64,10 @@ function getNNSelection(indexes) {
 			new_images.push(empty)
 		}
 
+		for (var x = 0; x < new_images.length; i++) {
+			console.log(new_images[x]);
+		}
+
 		// random positioning of array objects
 		var shuffeled_array = shuffle(new_images)
 
@@ -77,15 +81,11 @@ function getNNSelection(indexes) {
 		// move the second selected image to the same place
 		new_array = new_array.move(secondNewPos, triggeredSensors[1])
 
-		if (secondNewPos > firstNewPos) {
-			new_array = new_array.move(secondNewPos, triggeredSensors[1] + 1)
-		}
-
-		console.log('old array');
-		console.log(shuffeled_array)
-
-		console.log('new array');
-		console.log(new_array)
+		// console.log('old array');
+		// console.log(shuffeled_array)
+		//
+		// console.log('new array');
+		// console.log(new_array)
 
 
 		images = new_array
