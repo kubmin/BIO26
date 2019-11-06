@@ -77,8 +77,8 @@ function getNNSelection(indexes) {
 		// move the second selected image to the same place
 		new_array = new_array.move(secondNewPos, triggeredSensors[1])
 
-		if (firstNewPos < secondNewPos) {
-			new_array = new_array.move(firstNewPos, triggeredSensors[0])
+		if (secondNewPos < firstNewPos) {
+			new_array = new_array.move(secondNewPos, triggeredSensors[0])
 		}
 
 		console.log('old array');
