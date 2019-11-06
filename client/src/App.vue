@@ -45,7 +45,7 @@ export default {
         data.push(empty)
       }
 
-      this.shuffle(data)
+      // this.shuffle(data)
 
       this.$store.commit('setter', ['images', data])
       // console.log(this.images)

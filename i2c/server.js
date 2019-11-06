@@ -720,11 +720,11 @@ function getSensorData() {
     	images = response.data
       console.log(images)
     	io.emit('setImages', images)
-			triggered = false
 		})
 	  .catch((error) => {
     	console.log(error)
   	})
+		triggered = false
 	}
 
 	// Runs the sensor checker every 500 ms
