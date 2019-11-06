@@ -62,10 +62,12 @@ function getNNSelection(indexes) {
 		var shuffeled_array = shuffle(new_images)
 
 		var firstNewPos = shuffeled_array.findIndex(x => x.id === indexes[0])
-		var secondNewPos = shuffeled_array.findIndex(x => x.id === indexes[0])
+		var secondNewPos = shuffeled_array.findIndex(x => x.id === indexes[1])
 
 		console.log(firstNewPos)
 		console.log(secondNewPos)
+
+		console.log(shuffeled_array)
 
 		images = shuffeled_array
 
