@@ -80,13 +80,13 @@ function getNNSelection(indexes) {
 		// find new position of the second selected image
 		var secondNewPos = sorted_array.findIndex(x => x.id === indexes[1])
 		// move the second selected image to the same place
-		sorted_array = array_move(sorted_array, secondNewPos, triggeredSensors[1]+1)
+		var new_array = array_move(sorted_array, secondNewPos, triggeredSensors[1])
 
 
 		console.log('sorted_array')
 		console.log(sorted_array)
 
-		images = sorted_array
+		images = new_array
 
 		io.emit('setImages', images)
 
