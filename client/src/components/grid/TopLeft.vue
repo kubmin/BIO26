@@ -1,20 +1,14 @@
 <template lang="html">
-  <div v-if="checkArray(images)" class="grid-container">
+  <div class="grid-container">
 
     <div class="grid-item">
       <div class="grid-wrapper">
         <transition name="fade" mode="out-in">
-          <div v-if="emptyObject(images[0])" :key="images[0]"/>
-          <div v-else :key="images[0].id" >
+          <div :key="images[0].id" >
             <div class="grid-image">
               <div>
                 <FadeImage :url="path + images[0].url"/>
               </div>
-            </div>
-            <div class="grid-meta">
-              {{ title(images[0].url)[1] }}
-              {{ title(images[0].url)[2] }}<br>
-              {{ title(images[0].url)[0] }}
             </div>
           </div>
         </transition>
@@ -24,17 +18,11 @@
     <div class="grid-item">
       <div class="grid-wrapper">
         <transition name="fade" mode="out-in">
-        <div v-if="emptyObject(images[1])" :key="images[1]"/>
-        <div v-else :key="images[1].id">
+        <div :key="images[1].id">
           <div class="grid-image">
             <div>
               <FadeImage :url="path + images[1].url"/>
             </div>
-          </div>
-          <div class="grid-meta">
-            {{ title(images[1].url)[1] }}
-            {{ title(images[1].url)[2] }}<br>
-            {{ title(images[1].url)[0] }}
           </div>
         </div>
         </transition>
@@ -44,17 +32,11 @@
     <div class="grid-item">
       <div class="grid-wrapper">
         <transition name="fade" mode="out-in">
-          <div v-if="emptyObject(images[4])" :key="images[4]"/>
-          <div v-else :key="images[4].id" >
+          <div :key="images[4].id" >
             <div class="grid-image">
               <div>
                 <FadeImage :url="path + images[4].url"/>
               </div>
-            </div>
-            <div class="grid-meta">
-              {{ title(images[4].url)[1] }}
-              {{ title(images[4].url)[2] }}<br>
-              {{ title(images[4].url)[0] }}
             </div>
           </div>
         </transition>
@@ -65,17 +47,11 @@
     <div class="grid-item">
       <div class="grid-wrapper">
         <transition name="fade" mode="out-in">
-        <div v-if="emptyObject(images[5])" :key="images[5]"/>
-        <div v-else :key="images[5].id">
+        <div :key="images[5].id">
           <div class="grid-image">
             <div>
               <FadeImage :url="path + images[5].url"/>
             </div>
-          </div>
-          <div class="grid-meta">
-            {{ title(images[5].url)[1] }}
-            {{ title(images[5].url)[2] }}<br>
-            {{ title(images[5].url)[0] }}
           </div>
         </div>
         </transition>

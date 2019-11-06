@@ -3,10 +3,11 @@
     <div class="grid-item">
       <div class="grid-wrapper">
         <transition name="fade" mode="out-in">
-          <div v-if="emptyObject(images[8])" :key="images[8]"/>
-          <div v-else :key="images[8]" class="grid-image">
-            <div>
-              <img :src="path + images[8].url"/>
+          <div :key="images[8].id" >
+            <div class="grid-image">
+              <div>
+                <FadeImage :url="path + images[8].url"/>
+              </div>
             </div>
           </div>
         </transition>
@@ -16,10 +17,11 @@
     <div class="grid-item">
       <div class="grid-wrapper">
         <transition name="fade" mode="out-in">
-        <div v-if="emptyObject(images[9])" :key="images[9]"/>
-        <div v-else :key="images[9]" class="grid-image">
-          <div>
-            <img :src="path + images[9].url"/>
+        <div :key="images[9].id">
+          <div class="grid-image">
+            <div>
+              <FadeImage :url="path + images[9].url"/>
+            </div>
           </div>
         </div>
         </transition>
@@ -29,26 +31,29 @@
     <div class="grid-item">
       <div class="grid-wrapper">
         <transition name="fade" mode="out-in">
-          <div v-if="emptyObject(images[12])" :key="images[12]"/>
-          <div v-else :key="images[12]" class="grid-image">
-            <div>
-              <img :src="path + images[12].url"/>
+          <div :key="images[12].id" >
+            <div class="grid-image">
+              <div>
+                <FadeImage :url="path + images[12].url"/>
+              </div>
             </div>
           </div>
         </transition>
       </div>
     </div>
 
+
     <div class="grid-item">
       <div class="grid-wrapper">
         <transition name="fade" mode="out-in">
-        <div v-if="emptyObject(images[13])" :key="images[13]"/>
-        <div v-else :key="images[13]" class="grid-image">
-          <div>
-            <img :src="path + images[13].url"/>
+        <div :key="images[13].id">
+          <div class="grid-image">
+            <div>
+              <FadeImage :url="path + images[13].url"/>
+            </div>
           </div>
         </div>
-      </transition>
+        </transition>
       </div>
     </div>
   </div>
@@ -56,6 +61,8 @@
 
 <script>
 import { mapState, mapMutations } from 'vuex'
+import FadeImage from '../FadeImage.vue'
+
 
 export default {
   name: 'BottomLeft',
@@ -64,6 +71,9 @@ export default {
       'path',
       'images',
     ]),
+  },
+  components: {
+    FadeImage,
   },
   methods: {
     emptyObject(obj) {

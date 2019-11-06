@@ -7,6 +7,7 @@
 </template>
 
 <script>
+import _ from 'lodash'
 import io from 'socket.io-client'
 import axios from 'axios'
 
@@ -39,14 +40,12 @@ export default {
 
       // retrieve array length
       var nrEmpty = 16 - data.length
-      var empty = {}
 
       // only add empty objects if array is less then 16
       for (var i = 0; i < nrEmpty; i++) {
+        var empty = { id: Math.random() }
         data.push(empty)
       }
-
-      // this.shuffle(data)
 
       this.$store.commit('setter', ['images', data])
       // console.log(this.images)

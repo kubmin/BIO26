@@ -758,7 +758,8 @@ io.on('connection', (socket) => {
 		// in order to only do something with the data send by one client. In
 		// this case the last (3) client.
 		counter++
-		if (counter == 3) {
+		if (counter === 3) {
+			console.log('send');
 			getNNSelection(data)
 			counter = 0
 		}
