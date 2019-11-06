@@ -73,6 +73,8 @@ function getNNSelection(indexes) {
 		// random positioning of array objects
 		var shuffeled_array = shuffle(new_images)
 
+		console.log(shuffeled_array)
+
 		// find new position of the first selected image
 		var firstNewPos = shuffeled_array.findIndex(x => x.id === indexes[0])
 		// move the first selected image to the same place
@@ -88,6 +90,8 @@ function getNNSelection(indexes) {
 
 		console.log('new positions')
 		console.log([firstNewPos, secondNewPos])
+
+		console.log(sorted_array)
 
 		images = sorted_array
 
