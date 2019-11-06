@@ -64,12 +64,15 @@ function getNNSelection(indexes) {
 			new_images.push(empty)
 		}
 
+		// random positioning of array objects
+		var shuffeled_array = shuffle(new_images)
+
+
 		for (var x = 0; x < new_images.length; x++) {
 			console.log(new_images[x]);
 		}
 
-		// random positioning of array objects
-		var shuffeled_array = shuffle(new_images)
+
 
 		// find new position of the first selected image
 		var firstNewPos = shuffeled_array.findIndex(x => x.id === indexes[0])
