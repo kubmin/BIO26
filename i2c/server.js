@@ -59,18 +59,19 @@ function getNNSelection(indexes) {
 			new_images.push(empty)
 		}
 
-		var shuffled_array = shuffle(new_images)
+		var shuffeled_array = shuffle(new_images)
 
-		images = shuffled_array
+		var firstNewPos = shuffeled.findIndex(x => x.id === indexes[0])
+		var secondNewPos = shuffeled.findIndex(x => x.id === indexes[0])
+
+		console.log(firstNewPos)
+		console.log(secondNewPos)
+		
+		images = shuffeled_array
 
 		io.emit('setImages', images)
-		
-		console.log('images')
-		console.log(images)
-		console.log('triggeredSensors')
-		console.log(triggeredSensors)
-		console.log('image positions')
-		console.log(indexes)
+
+
 	})
 	.catch((error) => {
 		console.log(error)
