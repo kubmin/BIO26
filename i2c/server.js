@@ -18,16 +18,10 @@ function shuffle(array) {
   return array.sort(() => Math.random() - 0.5);
 }
 
-function array_move(arr, old_index, new_index) {
-  if (new_index >= arr.length) {
-    var k = new_index - arr.length + 1
-    while (k--) {
-        arr.push(undefined)
-    }
-  }
-  arr.splice(new_index, 0, arr.splice(old_index, 1)[0])
-	return arr
-}
+Array.prototype.move = function(from,to){
+  this.splice(to,0,this.splice(from,1)[0]);
+  return this;
+};
 
 function getRandomSelection() {
 	// Calculates a random new image sequence using the api
@@ -70,21 +64,21 @@ function getNNSelection(indexes) {
 			new_images.push(empty)
 		}
 
+		var array = new Array(16)
+		array[triggeredSensors[0]] = response.data[0]
+		array[triggeredSensors[1]] = response.data[nrEmpty]
+		console.log(array);
+
 		// random positioning of array objects
 		var shuffeled_array = shuffle(new_images)
+
 
 		// find new position of the first selected image
 		var firstNewPos = shuffeled_array.findIndex(x => x.id === indexes[0])
 		// move the first selected image to the same place
-		var sorted_array = array_move(shuffeled_array, firstNewPos, triggeredSensors[0])
-		// find new position of the second selected image
-		var secondNewPos = sorted_array.findIndex(x => x.id === indexes[1])
-		// move the second selected image to the same place
-		var new_array = array_move(sorted_array, secondNewPos, triggeredSensors[1])
+		shuffeled_array.move(firstNewPos, triggeredSensors[0])
+		var secondNewPos = shuffeled_array.findIndex(x => x.id === indexes[1])
 
-
-		console.log('sorted_array')
-		console.log(sorted_array)
 
 		images = new_array
 
