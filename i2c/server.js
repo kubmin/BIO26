@@ -750,6 +750,7 @@ io.on('connection', (socket) => {
 	// maybe this client counter also needs to be implemented here
 	console.log('client connected')
 	socket.emit('init', images)
+	
 	getSensorData()
 
 	socket.on('calculateN', (data) => {
