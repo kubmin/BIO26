@@ -29,15 +29,11 @@ export default {
   },
   methods: {
     shuffle(array) {
-      array.sort(() => Math.random() - 0.5);
+      return array.sort(() => Math.random() - 0.5);
     }
   },
   created() {
     this.socket.on('setImages', (data) => {
-      console.log('calculate');
-      var first = data[0].id
-      var last = data[data.length - 1].id
-
       // retrieve array length
       var nrEmpty = 16 - data.length
 
@@ -45,10 +41,14 @@ export default {
       for (var i = 0; i < nrEmpty; i++) {
         var empty = { id: Math.random() }
         data.push(empty)
+        console.log('im busy');
       }
 
+      var new_array = this.shuffle(data)
+      console.log(new_array)
+
+
       this.$store.commit('setter', ['images', data])
-      // console.log(this.images)
     })
     this.socket.on('reset', (data) => {
       console.log('init');
@@ -123,7 +123,7 @@ body {
   width: 100%;
 }
 
-.grid-image > div > img {
+ img {
   object-fit: cover;
   max-width: 100%;
   max-height: 100%;

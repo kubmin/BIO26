@@ -1,61 +1,36 @@
 <template lang="html">
-  <div class="grid-container">
-    <div class="grid-item">
-      <div class="grid-wrapper">
-        <transition name="fade" mode="out-in">
-          <div :key="images[2].id" >
-            <div class="grid-image">
-              <div>
-                <FadeImage :url="path + images[2].url"/>
-              </div>
-            </div>
-          </div>
-        </transition>
-      </div>
+  <div v-if="images.length > 0" class="grid-container">
+    <div v-if="'url' in images[2]" class="grid-item">
+      <img :src="path + images[2].url"/>
+      yes image exists
     </div>
-
-    <div class="grid-item">
-      <div class="grid-wrapper">
-        <transition name="fade" mode="out-in">
-        <div :key="images[3].id">
-          <div class="grid-image">
-            <div>
-              <FadeImage :url="path + images[3].url"/>
-            </div>
-          </div>
-        </div>
-        </transition>
-      </div>
+    <div v-else class="grid-item">
+      no there is no image
     </div>
-
-    <div class="grid-item">
-      <div class="grid-wrapper">
-        <transition name="fade" mode="out-in">
-          <div :key="images[6].id" >
-            <div class="grid-image">
-              <div>
-                <FadeImage :url="path + images[6].url"/>
-              </div>
-            </div>
-          </div>
-        </transition>
-      </div>
+    <div v-if="'url' in images[3]" class="grid-item">
+      <img :src="path + images[3].url"/>
+      yes image exists
     </div>
-
-
-    <div class="grid-item">
-      <div class="grid-wrapper">
-        <transition name="fade" mode="out-in">
-        <div :key="images[7].id">
-          <div class="grid-image">
-            <div>
-              <FadeImage :url="path + images[7].url"/>
-            </div>
-          </div>
-        </div>
-        </transition>
-      </div>
+    <div v-else class="grid-item">
+      no there is no image
     </div>
+    <div v-if="'url' in images[6]" class="grid-item">
+      <img :src="path + images[6].url"/>
+      yes image exists
+    </div>
+    <div v-else class="grid-item">
+      no there is no image
+    </div>
+    <div v-if="'url' in images[7]" class="grid-item">
+      <img :src="path + images[7].url"/>
+      yes image exists
+    </div>
+    <div v-else class="grid-item">
+      no there is no image
+    </div>
+  </div>
+  <div v-else>
+    ERROR: No sensor connection
   </div>
 </template>
 
@@ -74,13 +49,5 @@ export default {
   components: {
     FadeImage,
   },
-  methods: {
-    emptyObject(obj) {
-      return Object.keys(obj).length === 0 && obj.constructor === Object
-    }
-  }
 }
 </script>
-
-<style lang="css" scoped>
-</style>

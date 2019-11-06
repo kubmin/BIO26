@@ -43,9 +43,15 @@ function getNNSelection(indexes) {
 		headers: form.getHeaders(),
 	})
 	.then(response => {
+		// TODO: Handle image sorting
 		images = response.data
-		io.emit('setImages', images)
+		// io.emit('setImages', images)
+		console.log('images')
 		console.log(images)
+		console.log('triggeredSensors')
+		console.log(triggeredSensors)
+		console.log('image positions')
+		console.log(data)
 	})
 	.catch((error) => {
 		console.log(error)
