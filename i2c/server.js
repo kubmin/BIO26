@@ -814,7 +814,6 @@ io.on('connection', (socket) => {
 		if (counter === 3) {
 			console.log('send');
 			console.log(counter)
-			(data)
 			counter = 0
 		} else if (counter < 3) {
 			counter++
