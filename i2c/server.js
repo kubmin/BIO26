@@ -65,7 +65,7 @@ function getNNSelection(indexes) {
 		var secondNewPos = shuffeled_array.findIndex(x => x.id === indexes[1])
 
 		console.log('old positions')
-		console.log(indexes)
+		console.log(triggeredSensors)
 
 		console.log('new positions')
 		console.log([firstNewPos, secondNewPos])
