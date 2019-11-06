@@ -760,6 +760,7 @@ io.on('connection', (socket) => {
 		counter++
 		if (counter === 3) {
 			console.log('send');
+			console.log(counter)
 			getNNSelection(data)
 			counter = 0
 		}
