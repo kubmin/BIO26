@@ -64,7 +64,7 @@ function getNNSelection(indexes) {
 			new_images.push(empty)
 		}
 
-		for (var x = 0; x < new_images.length; i++) {
+		for (var x = 0; x < new_images.length; x++) {
 			console.log(new_images[x]);
 		}
 
