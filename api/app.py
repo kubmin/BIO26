@@ -1,5 +1,7 @@
 from flask import Flask, jsonify, send_file, send_from_directory, request
 from flask_cors import CORS
+from gevent.pywsgi import WSGIServer
+import os
 import random
 import collections
 import numpy as np
@@ -8,19 +10,20 @@ from PIL import Image
 from scipy.spatial import distance
 from igraph import *
 
+script_dir = os.path.dirname(os.path.realpath(__file__))
 
 # configuration
 DEBUG = True
 
 # instantiate the app
-app = Flask(__name__, static_url_path='/image-path/')
+app = Flask(__name__, static_url_path=os.path.join(script_dir, '/image-path/'))
 app.config.from_object(__name__)
 
 # enable CORS
 CORS(app, resources={r'/*': {'origins': '*'}})
 
 # load images array and graph
-images, graph = pickle.load(open('data/graph_images_30knn.p', 'rb'))
+images, graph = pickle.load(open(os.path.join(script_dir, 'data/graph_images_30knn.p'), 'rb'))
 
 @app.route('/', methods=['GET'])
 def random_images():
@@ -65,7 +68,10 @@ def download(filename):
     print(filename)
     return send_from_directory(directory='datasets/bio/', filename=filename)
 
-
-
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    # development
+    #app.run(host="0.0.0.0", port=5000, debug=True)
+
+    # production
+    http_server = WSGIServer(('', 5000), app)
+    http_server.serve_forever()

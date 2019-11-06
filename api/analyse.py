@@ -17,8 +17,8 @@ from tqdm import tqdm
 import json
 
 parser = argparse.ArgumentParser()
-parser.add_argument('-d', '--dataset', required=False, default='images', help="location of the dataset")
-parser.add_argument('-s', '--save', required=False, default='features_images', help="save location of the trained features")
+parser.add_argument('-d', '--dataset', required=False, default='biov3', help="location of the dataset")
+parser.add_argument('-s', '--save', required=False, default='biov3', help="save location of the trained features")
 args = vars(parser.parse_args())
 
 """
@@ -85,9 +85,9 @@ pca_features = pca.transform(features)
 print('[INFO] Saving extracted features')
 print('[INFO] Building graph')
 # save extracted images, pca_features and pca to use later
-pickle.dump([images, pca_features, pca], open('data/' + args["save"] + '.p', 'wb'))
+pickle.dump([images, pca_features, pca], open('data/' + 'features_' + args["save"] + '.p', 'wb'))
 
-images, pca_features, pca  = pickle.load(open('data/features_images.p', 'rb'))
+images, pca_features, pca  = pickle.load(open('data/' + 'features_' + args["save"] + '.p', 'rb'))
 
 kNN = 30
 
@@ -102,4 +102,4 @@ for i in tqdm(range(len(images))):
 
 summary(graph)
 
-pickle.dump([images, graph], open('data/graph_images_30knn.p', 'wb'))
+pickle.dump([images, graph], open('data/graph_' + args["save"] + '_30knn.p', 'wb'))

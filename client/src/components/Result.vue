@@ -39,7 +39,7 @@ export default {
   props: ['sIdx', 'eIdx'],
   data() {
     return {
-      path: 'http://192.168.0.97:5000/',
+      path: 'http://192.168.1.70:5000/',
       images: [],
       message: null,
       bodyFormData: new FormData(),
