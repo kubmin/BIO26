@@ -34,6 +34,7 @@ export default {
   },
   created() {
     this.socket.on('setImages', (data) => {
+      console.log(data);
       this.$store.commit('setter', ['images', data])
     })
     this.socket.on('reset', (data) => {
