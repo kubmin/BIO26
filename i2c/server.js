@@ -78,7 +78,7 @@ function getNNSelection(indexes) {
 		new_array = new_array.move(secondNewPos, triggeredSensors[1])
 
 		if (secondNewPos < firstNewPos) {
-			new_array = new_array.move(secondNewPos, triggeredSensors[1])
+			new_array = new_array.move(secondNewPos, triggeredSensors[1] + 1)
 		}
 
 		console.log('old array');
