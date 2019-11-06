@@ -34,20 +34,6 @@ export default {
   },
   created() {
     this.socket.on('setImages', (data) => {
-      // retrieve array length
-      var nrEmpty = 16 - data.length
-
-      // only add empty objects if array is less then 16
-      for (var i = 0; i < nrEmpty; i++) {
-        var empty = { id: Math.random() }
-        data.push(empty)
-        console.log('im busy');
-      }
-
-      var new_array = this.shuffle(data)
-      console.log(new_array)
-
-
       this.$store.commit('setter', ['images', data])
     })
     this.socket.on('reset', (data) => {

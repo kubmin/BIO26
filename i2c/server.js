@@ -14,6 +14,10 @@ var sensorZero, sensorOne, sensorTwo, sensorThree, triggeredSensors, images
 var triggered = false
 var counter = 0
 
+function shuffle(array) {
+  return array.sort(() => Math.random() - 0.5);
+}
+
 function getRandomSelection() {
 	// Calculates a random new image sequence using the api
 	console.log('Retrieving random selection')
@@ -44,8 +48,23 @@ function getNNSelection(indexes) {
 	})
 	.then(response => {
 		// TODO: Handle image sorting
-		images = response.data
-		// io.emit('setImages', images)
+		var new_images = response.data
+
+		// retrieve array length
+		var nrEmpty = 16 - new_images.length
+
+		// only add empty objects if array is less then 16
+		for (var i = 0; i < nrEmpty; i++) {
+			var empty = { id: Math.random() }
+			new_images.push(empty)
+		}
+
+		var shuffled_array = shuffle(new_images)
+
+		images = shuffled_array
+
+		io.emit('setImages', images)
+		
 		console.log('images')
 		console.log(images)
 		console.log('triggeredSensors')
