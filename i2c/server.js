@@ -757,12 +757,13 @@ io.on('connection', (socket) => {
 		// because all the four clients send the same data we use a counter
 		// in order to only do something with the data send by one client. In
 		// this case the last (3) client.
-		counter++
 		if (counter === 3) {
 			console.log('send');
 			console.log(counter)
 			getNNSelection(data)
 			counter = 0
+		} else (counter < 3) {
+			counter++
 		}
 	})
 })
