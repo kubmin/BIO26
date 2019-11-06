@@ -72,6 +72,11 @@ function getNNSelection(indexes) {
 		// move the first selected image to the same place
 		var new_array = shuffeled_array.move(firstNewPos, triggeredSensors[0])
 
+		// find new position of the second selected image
+		var secondNewPos = shuffeled_array.findIndex(x => x.id === indexes[1])
+		// move the second selected image to the same place
+		new_array = new_array.move(secondNewPos, triggeredSensors[1])
+
 		console.log('old array');
 		console.log(shuffeled_array)
 
