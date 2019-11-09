@@ -103,6 +103,7 @@ function getSensorData() {
 	sensorThree = i2c.readByteSync(0x24, 0x01)
 
   console.log([sensorZero, sensorOne, sensorTwo, sensorThree])
+  console.log(triggered);
 
 	if (triggered == false) {
 		// First sensor
@@ -805,6 +806,7 @@ io.on('connection', (socket) => {
 			console.log(counter)
 			getNNSelection(data)
 			counter = 0
+      triggered = false
 		} else if (counter < 3) {
 			counter++
 		}
