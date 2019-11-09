@@ -40,6 +40,7 @@ function getRandomSelection() {
 function getNNSelection(indexes) {
 	// Calculates a new image sequence by using the image id's (indexes) we got
 	// from the client.
+  console.log('emit function');
 
 	console.log('Retrieving calculated image sequence')
 
@@ -799,6 +800,7 @@ io.on('connection', (socket) => {
 	getSensorData()
 
 	socket.on('calculateN', (data) => {
+    console.log('hello fromm calculateN');
 		// because all the four clients send the same data we use a counter
 		// in order to only do something with the data send by one client. In
 		// this case the last (3) client.
