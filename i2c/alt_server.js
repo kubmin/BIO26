@@ -806,7 +806,6 @@ io.on('connection', (socket) => {
 			console.log(counter)
 			getNNSelection(data)
 			counter = 0
-      triggered = false
 		} else if (counter < 3) {
 			counter++
 		}
