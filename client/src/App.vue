@@ -52,6 +52,12 @@ export default {
 </script>
 
 <style>
+@font-face {
+  font-family: Lausanne;
+  src: url('assets/lausanne.woff') format('woff');
+  font-style: normal;
+}
+
 html,
 body {
   margin: 0;
@@ -60,12 +66,13 @@ body {
 }
 
 #bio-26 {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Lausanne, serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
-  color: #2c3e50;
+  color: #000000;
   height: 100%;
+  line-height: 1.2;
   /* padding: 12px */
   padding: 1em;
 
