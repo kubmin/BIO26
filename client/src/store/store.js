@@ -6,12 +6,9 @@ import axios from 'axios'
 Vue.use(Vuex)
 
 const state = {
+  debug: false,
   path: 'http://192.168.0.53:5000/',
   images: [],
-}
-
-const getters = {
-
 }
 
 const mutations = {
@@ -22,6 +19,5 @@ const mutations = {
 
 export default new Vuex.Store({
   state,
-  getters,
   mutations,
 })

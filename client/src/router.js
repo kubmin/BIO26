@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Grid from './components/Grid.vue'
-import Result from './components/Result.vue'
+// import Grid from './components/Grid.vue'
+// import Result from './components/Result.vue'
 import PageNotFound from './components/PageNotFound.vue'
 // Quarters
 import TopLeft from './components/grid/TopLeft.vue'

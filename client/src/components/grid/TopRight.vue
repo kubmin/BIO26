@@ -1,53 +1,40 @@
 <template lang="html">
-  <div v-if="images.length > 0" class="grid-container">
-    <div v-if="'url' in images[2]" class="grid-item">
-      <img :src="path + images[2].url"/>
-      yes image exists
-    </div>
-    <div v-else class="grid-item">
-      no there is no image
-    </div>
-    <div v-if="'url' in images[3]" class="grid-item">
-      <img :src="path + images[3].url"/>
-      yes image exists
-    </div>
-    <div v-else class="grid-item">
-      no there is no image
-    </div>
-    <div v-if="'url' in images[6]" class="grid-item">
-      <img :src="path + images[6].url"/>
-      yes image exists
-    </div>
-    <div v-else class="grid-item">
-      no there is no image
-    </div>
-    <div v-if="'url' in images[7]" class="grid-item">
-      <img :src="path + images[7].url"/>
-      yes image exists
-    </div>
-    <div v-else class="grid-item">
-      no there is no image
-    </div>
+  <div v-if="images.length > 0" class="client-container">
+    <GridItem :data="images[2]"/>
+    <GridItem :data="images[3]"/>
+    <GridItem :data="images[6]"/>
+    <GridItem :data="images[7]"/>
   </div>
   <div v-else>
-    ERROR: No sensor connection
+    {{ info }}
   </div>
 </template>
 
 <script>
-import { mapState, mapMutations } from 'vuex'
-import FadeImage from '../FadeImage.vue'
+import { mapState } from 'vuex'
+
+import GridItem from './GridItem.vue'
 
 export default {
-  name: 'TopRight',
+  name: 'BottomRight',
+  data() {
+    return {
+      info: 'Loading ...'
+    }
+  },
   computed: {
     ...mapState([
       'path',
       'images',
     ]),
   },
+  mounted() {
+    setTimeout(() => {
+      this.info = 'Failed loading.'
+    }, 5000)
+  },
   components: {
-    FadeImage,
+    GridItem,
   },
 }
 </script>

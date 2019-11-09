@@ -63,10 +63,12 @@ body {
   font-family: Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  box-sizing:border-box;
+  box-sizing: border-box;
   color: #2c3e50;
   height: 100%;
-  padding: 12px;
+  /* padding: 12px */
+  padding: 1em;
+
 }
 
 .grid-container {
@@ -79,7 +81,6 @@ body {
 
 .grid-item {
   font-size: 12px;
-  border: 1px blue solid;
 }
 
 .grid-wrapper > div,
@@ -111,9 +112,18 @@ body {
 }
 
  img {
-  object-fit: cover;
+  display: block;
   max-width: 100%;
-  max-height: 100%;
+  max-height: 80%;
+}
+
+.client-container {
+  /* align-items: flex-start; */
+  display: grid;
+  grid-template-columns: repeat(2, calc(50% - 18px));
+  grid-template-rows: repeat(2, calc(50% - 18px));
+  grid-gap: 24px;
+  height: 100%;
 }
 
 .fade-enter-active, .fade-leave-active {
