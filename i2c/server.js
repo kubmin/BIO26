@@ -110,7 +110,6 @@ function getSensorData() {
   console.log([sensorZero, sensorOne, sensorTwo, sensorThree])
 
 	if (triggered == false) {
-    console.log(triggeredSensors)
 		// First sensor
 		if (sensorZero == 250) {
 		  // 1 + 2
