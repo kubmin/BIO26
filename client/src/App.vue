@@ -43,6 +43,7 @@ export default {
     })
     this.socket.on('sensorData', (data) => {
       this.sensors = data
+      console.log(sensors);
       // socket.io sends the images indexs, client retrieved images id and sends
       // it back to socket.io to retrieve a calculated nn image array
       this.socket.emit('calculateN', [this.images[data[0]].id, this.images[data[1]].id])

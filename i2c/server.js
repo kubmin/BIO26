@@ -107,7 +107,10 @@ function getSensorData() {
 	sensorTwo = i2c.readByteSync(0x24, 0x00)
 	sensorThree = i2c.readByteSync(0x24, 0x01)
 
+  console.log(triggered)
+
 	if (triggered == false) {
+    console.log(triggeredSensors)
 		// First sensor
 		if (sensorZero == 250) {
 		  // 1 + 2
