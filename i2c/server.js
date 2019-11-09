@@ -111,7 +111,7 @@ function getSensorData() {
 
 	if (triggered == false) {
 		// First sensor
-		if (sensorZero == 250) {
+		if (sensorZero == 161) {
 		  // 1 + 2
 		  triggeredSensors = [0,1]
       io.emit('sensorData', triggeredSensors)
@@ -156,7 +156,7 @@ function getSensorData() {
 		  triggeredSensors = [0,9]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorTwo == 239 && sensorZero == 254) {
+  		} else if (sensorTwo == 239 && sensorZero == 254) {
 		  // 1 + 11
 		  triggeredSensors = [0,10]
 			io.emit('sensorData', triggeredSensors)
