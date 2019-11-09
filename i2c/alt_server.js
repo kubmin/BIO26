@@ -756,7 +756,7 @@ function getSensorData() {
 	}
 
 	// All the sensors are not active
-	if (triggered == true && sensorZero == 161 && sensorOne == 52 && sensorTwo == 22 && sensorThree == 150) {
+	if (triggered == true && sensorZero == 164 && sensorOne == 52 && sensorTwo == 22 && sensorThree == 150) {
 		// Reset image sequence
 		console.log('Reset sequence')
     axios.get(path)
