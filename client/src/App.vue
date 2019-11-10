@@ -7,11 +7,9 @@
 </template>
 
 <script>
-import _ from 'lodash'
 import io from 'socket.io-client'
-import axios from 'axios'
 
-import { mapState, mapMutations } from 'vuex'
+import { mapState } from 'vuex'
 
 export default {
   name: 'BIO26',
@@ -34,11 +32,9 @@ export default {
   },
   created() {
     this.socket.on('setImages', (data) => {
-      console.log(data);
       this.$store.commit('setter', ['images', data])
     })
     this.socket.on('reset', (data) => {
-      console.log('init');
       this.$store.commit('setter', ['images', data])
     })
     this.socket.on('sensorData', (data) => {

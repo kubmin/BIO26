@@ -9,8 +9,8 @@
     </transition>
     <transition name="fade" mode="out-in">
       <div v-show="load" ref="meta">
-        {{ title(data.url)[0] }} </br>
-        {{ title(data.url)[1] }} {{ title(data.url)[2] }}</br>
+        {{ title(data.url)[0] }} <br/>
+        {{ title(data.url)[1] }} {{ title(data.url)[2] }}<br/>
       </div>
     </transition>
   </div>
