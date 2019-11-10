@@ -7,7 +7,7 @@ for item in dirs:
     if os.path.isfile(path+item):
         # print(item)
         old_filename, e = os.path.splitext(item)
-        # print(old_filename)
-        new_filename = old_filename.replace(":", "_")
+        print(old_filename)
+        new_filename = old_filename.replace(">", "]")
         print(new_filename)
         os.rename(path + old_filename +'.jpg', path + new_filename + '.jpg')
