@@ -80,7 +80,12 @@ function getNNSelection(indexes) {
 			new_array = new_array.move(secondNewPos, triggeredSensors[1])
 		}
 
+		console.log('old array');
+		console.log(shuffeled_array)
+
+		console.log('new array');
 		console.log(new_array)
+
 
 		images = new_array
 
@@ -109,8 +114,11 @@ function getSensorData() {
 		if (sensorZero == 250) {
 		  // 1 + 2
 		  triggeredSensors = [0,1]
+      console.log(triggered);
       io.emit('sensorData', triggeredSensors)
+      console.log('emitted');
 		  triggered = true
+      console.log(triggered);
 		} else if (sensorZero == 238) {
 		  // 1 + 3
 		  triggeredSensors = [0,2]
@@ -151,7 +159,7 @@ function getSensorData() {
 		  triggeredSensors = [0,9]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-  		} else if (sensorTwo == 239 && sensorZero == 254) {
+		} else if (sensorTwo == 239 && sensorZero == 254) {
 		  // 1 + 11
 		  triggeredSensors = [0,10]
 			io.emit('sensorData', triggeredSensors)
