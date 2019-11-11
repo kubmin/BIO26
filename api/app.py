@@ -23,7 +23,7 @@ app.config.from_object(__name__)
 CORS(app, resources={r'/*': {'origins': '*'}})
 
 # load images array and graph
-images, graph = pickle.load(open(os.path.join(script_dir, 'data/graph_images_30knn.p'), 'rb'))
+images, graph = pickle.load(open(os.path.join(script_dir, 'data/graph_test_30knn.p'), 'rb'))
 
 @app.route('/', methods=['GET'])
 def random_images():
@@ -66,7 +66,7 @@ def nearest_neighbour():
 @app.route('/datasets/bio/<path:filename>', methods=['GET', 'POST'])
 def download(filename):
     print(filename)
-    return send_from_directory(directory='datasets/bio/', filename=filename)
+    return send_from_directory(directory='datasets/test/', filename=filename)
 
 if __name__ == '__main__':
     # development

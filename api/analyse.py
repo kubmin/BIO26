@@ -19,8 +19,8 @@ import json
 Image.MAX_IMAGE_PIXELS = None
 
 parser = argparse.ArgumentParser()
-parser.add_argument('-d', '--dataset', required=False, default='biov3', help="location of the dataset")
-parser.add_argument('-s', '--save', required=False, default='biov3', help="save location of the trained features")
+parser.add_argument('-d', '--dataset', required=False, default='test', help="location of the dataset")
+parser.add_argument('-s', '--save', required=False, default='test', help="save location of the trained features")
 args = vars(parser.parse_args())
 
 """
