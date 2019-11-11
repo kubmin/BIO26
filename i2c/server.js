@@ -114,11 +114,8 @@ function getSensorData() {
 		if (sensorZero == 250) {
 		  // 1 + 2
 		  triggeredSensors = [0,1]
-      console.log(triggered);
       io.emit('sensorData', triggeredSensors)
-      console.log('emitted');
 		  triggered = true
-      console.log(triggered);
 		} else if (sensorZero == 238) {
 		  // 1 + 3
 		  triggeredSensors = [0,2]
