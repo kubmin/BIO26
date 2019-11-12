@@ -7,7 +7,7 @@ const FormData = require('form-data')
 
 const app = express()
 const i2c = new I2C()
-const path = 'http://192.168.0.53:5000/'
+const path = 'http://95.87.143.32:5000/'
 
 var sensorZero, sensorOne, sensorTwo, sensorThree, triggeredSensors, images
 

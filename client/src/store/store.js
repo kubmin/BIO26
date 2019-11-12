@@ -5,7 +5,7 @@ Vue.use(Vuex)
 
 const state = {
   debug: false,
-  path: 'http://192.168.1.79:5000/',
+  path: 'http://95.87.143.32:5000/',
   images: [],
 }
 

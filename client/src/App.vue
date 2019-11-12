@@ -15,7 +15,7 @@ export default {
   name: 'BIO26',
   data() {
     return {
-      socket: io('192.168.0.53:3002'),
+      socket: io('95.87.143.32:3002'),
       sensors: [],
     }
   },
