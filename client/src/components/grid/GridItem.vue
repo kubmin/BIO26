@@ -5,12 +5,10 @@
     :key="data.id"
     class="client-item"
     :class="{
-        'align__flex-start': style == 1,
-        'align__flex-center': style == 2,
-        'align__flex-end': style == 3,
-        'justify__flex-start': style == 4,
-        'justify__flex-center': style == 5,
-        'justify__flex-end': style == 6,
+        'align__flex-center': align == 1,
+        'align__flex-end': align == 2,
+        'justify__flex-center': justify == 1,
+        'justify__flex-end': justify == 2,
         'debug': debug == true,
       }"
     >
@@ -41,7 +39,8 @@ export default {
   data() {
     return {
       imageLoaded: false,
-      style: Math.floor(Math.random() * 2) + 1,
+      align: Math.floor(Math.random() * 2) + 1,
+      justify: Math.floor(Math.random() * 2) + 1
     }
   },
   components: {
@@ -61,17 +60,11 @@ export default {
 
 <style lang="css" scoped>
   .client-item {
+    align-items: flex-end;
     display: flex;
     box-sizing: border-box;
     overflow: hidden;
   }
-  /* .content img {
-    margin-bottom: 12px;
-  }
-  .content {
-    width: 80%;
-  } */
-
   /* conditional styles */
   .debug {
     border: 1px solid red;
@@ -87,12 +80,12 @@ export default {
   }
 
   .justify__flex-end {
-    align-items: flex-end;
+    justify-content: flex-end;
   }
   .justify__flex-start {
-    align-items: flex-start;
+    justify-content: flex-start;
   }
   .justify__flex-center {
-    align-items: center;
+    justify-content: center;
   }
 </style>

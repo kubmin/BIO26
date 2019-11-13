@@ -32,7 +32,6 @@ export default {
   },
   created() {
     this.socket.on('setImages', (data) => {
-      console.log(data);
       this.$store.commit('setter', ['images', data])
     })
     this.socket.on('reset', (data) => {
@@ -71,7 +70,7 @@ body {
   height: 100%;
   line-height: 1.2;
   /* padding: 12px */
-  padding: 1em;
+  padding: 2em;
 
 }
 
@@ -122,11 +121,10 @@ body {
 }
 
 .client-container {
-  /* align-items: flex-start; */
   display: grid;
-  grid-template-columns: repeat(2, calc(50% - 18px));
-  grid-template-rows: repeat(2, calc(50% - 18px));
-  grid-gap: 24px;
+  grid-template-columns: repeat(2, calc(50% - 12px));
+  grid-template-rows: repeat(2, calc(50% - 30px));
+  grid-gap: 60px 24px;
   height: 100%;
 }
 

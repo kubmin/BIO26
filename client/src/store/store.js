@@ -4,7 +4,7 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 const state = {
-  debug: false,
+  debug: true,
   path: 'http://95.87.143.32:5000/',
   images: [],
 }

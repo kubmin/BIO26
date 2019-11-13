@@ -117,72 +117,72 @@ function getSensorData() {
 		  triggeredSensors = [0,1]
       io.emit('sensorData', triggeredSensors)
 		  triggered = true
-		} else if (sensorZero == 238) {
+		} else if (sensorZero == 235) {
 		  // 1 + 3
 		  triggeredSensors = [0,2]
 			io.emit('sensorData', triggeredSensors)
 		  triggered = true
-		} else if (sensorZero == 190) {
+		} else if (sensorZero == 187) {
 		  // 1 + 4
 		  triggeredSensors = [0,3]
 			io.emit('sensorData', triggeredSensors)
 		  triggered = true
-		} else if (sensorZero == 254 && sensorOne == 254) {
+		} else if (sensorZero == 251 && sensorOne == 251) {
 		  // 1 + 5
 		  triggeredSensors = [0,4]
 			io.emit('sensorData', triggeredSensors)
 		  triggered = true
-		} else if (sensorZero == 254 && sensorOne == 251) {
+		} else if (sensorZero == 251 && sensorOne == 254) {
 		  // 1 + 6
 		  triggeredSensors = [0,5]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorZero == 254 && sensorOne == 239) {
+		} else if (sensorZero == 251 && sensorOne == 239) {
 		  // 1 + 7
 		  triggeredSensors = [0,6]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorZero == 254 && sensorOne == 191) {
+		} else if (sensorZero == 251 && sensorOne == 191) {
 		  // 1 + 8
 		  triggeredSensors = [0,7]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorTwo == 254 && sensorZero == 254) {
+		} else if (sensorZero == 251 && sensorTwo == 251) {
 		  // 1 + 9
 		  triggeredSensors = [0,8]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorTwo == 251 && sensorZero == 254) {
+		} else if (sensorZero == 251 && sensorTwo == 254) {
 		  // 1 + 10
 		  triggeredSensors = [0,9]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorTwo == 239 && sensorZero == 254) {
+		} else if (sensorZero == 251 && sensorTwo == 255) {
 		  // 1 + 11
 		  triggeredSensors = [0,10]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorTwo == 191 && sensorZero == 254) {
+		} else if (sensorZero == 251 && sensorTwo == 191) {
 		  // 1 + 12
 		  triggeredSensors = [0,11]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorThree == 254 && sensorZero == 254) {
+		} else if (sensorZero == 251 && sensorThree == 251) {
 		  // 1 + 13
 		  triggeredSensors = [0,12]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorThree == 251 && sensorZero == 254) {
+		} else if (sensorZero == 251 && sensorThree == 254) {
 		  // 1 + 14
 		  triggeredSensors = [0,13]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorThree == 239 && sensorZero == 254) {
+		} else if (sensorZero == 251 && sensorThree == 239) {
 		  // 1 + 15
 		  triggeredSensors = [0,14]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorThree == 191 && sensorZero == 254) {
+		} else if (sensorZero == 251 && sensorThree == 191) {
 		  // 1 + 16
 		  triggeredSensors = [0,15]
 			io.emit('sensorData', triggeredSensors)
@@ -190,42 +190,42 @@ function getSensorData() {
 		}
 
 		// Second sensor
-		if (sensorZero == 235) {
+		if (sensorZero == 238) {
 		  // 2 + 3
 		  triggeredSensors = [1,2]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorZero == 187) {
+		} else if (sensorZero == 190) {
 		  // 2 + 4
 		  triggeredSensors = [1,3]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorZero == 251 && sensorOne == 254) {
+		} else if (sensorZero == 254 && sensorOne == 251) {
 		  // 2 + 5
 		  triggeredSensors = [1,4]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorZero == 251 && sensorOne == 251) {
+		} else if (sensorZero == 254 && sensorOne == 254) {
 		  // 2 + 6
 		  triggeredSensors = [1,5]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorZero == 251 && sensorOne == 239) {
+		} else if (sensorZero == 254 && sensorOne == 239) {
 		  // 2 + 7
 		  triggeredSensors = [1,6]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorZero == 251 && sensorOne == 191) {
+		} else if (sensorZero == 254 && sensorOne == 191) {
 		  // 2 + 8
 		  triggeredSensors = [1,7]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorZero == 251 && sensorTwo == 254) {
+		} else if (sensorZero == 254 && sensorTwo == 251) {
 		  // 2 + 9
 		  triggeredSensors = [1,8]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorZero == 251 && sensorTwo == 251) {
+		} else if (sensorZero == 254 && sensorTwo == 254) {
 		  // 2 + 10
 		  triggeredSensors = [1,9]
 			io.emit('sensorData', triggeredSensors)
@@ -235,27 +235,27 @@ function getSensorData() {
 		  triggeredSensors = [1,10]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorZero == 251 && sensorTwo == 191) {
+		} else if (sensorZero == 254 && sensorTwo == 191) {
 		  // 2 + 12
 		  triggeredSensors = [1,11]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorZero == 251 && sensorThree == 254) {
+		} else if (sensorZero == 254 && sensorThree == 251) {
 		  // 2 + 13
 		  triggeredSensors = [1,12]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorZero == 251 && sensorThree == 251) {
+		} else if (sensorZero == 254 && sensorThree == 254) {
 		  // 2 + 14
 		  triggeredSensors = [1,13]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorZero == 251 && sensorThree == 239) {
+		} else if (sensorZero == 254 && sensorThree == 239) {
 		  // 2 + 15
 		  triggeredSensors = [1,14]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorZero == 251 && sensorThree == 191) {
+		} else if (sensorZero == 254 && sensorThree == 191) {
 		  // 2 + 16
 		  triggeredSensors = [1,15]
 			io.emit('sensorData', triggeredSensors)
@@ -268,12 +268,12 @@ function getSensorData() {
 		  triggeredSensors = [2,3]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorZero == 239 && sensorOne == 254) {
+		} else if (sensorZero == 239 && sensorOne == 251) {
 		  // 3 + 5
 		  triggeredSensors = [2,4]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorZero == 239 && sensorOne == 251) {
+		} else if (sensorZero == 239 && sensorOne == 254) {
 		  // 3 + 6
 		  triggeredSensors = [2,5]
 			io.emit('sensorData', triggeredSensors)
@@ -288,12 +288,12 @@ function getSensorData() {
 		  triggeredSensors = [2,7]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorZero == 239 && sensorTwo == 254) {
+		} else if (sensorZero == 239 && sensorTwo == 251) {
 		  // 3 + 9
 		  triggeredSensors = [2,8]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorZero == 239 && sensorTwo == 251) {
+		} else if (sensorZero == 239 && sensorTwo == 254) {
 		  // 3 + 10
 		  triggeredSensors = [2,9]
 			io.emit('sensorData', triggeredSensors)
@@ -308,12 +308,12 @@ function getSensorData() {
 		  triggeredSensors = [2,11]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorZero == 239 && sensorThree == 254) {
+		} else if (sensorZero == 239 && sensorThree == 251) {
 		  // 3 + 13
 		  triggeredSensors = [2,12]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorZero == 239 && sensorThree == 251) {
+		} else if (sensorZero == 239 && sensorThree == 254) {
 		  // 3 + 14
 		  triggeredSensors = [2,13]
 			io.emit('sensorData', triggeredSensors)
@@ -331,12 +331,12 @@ function getSensorData() {
 		}
 
 		// Fourth sensor
-		if (sensorZero == 191 && sensorOne == 254) {
+		if (sensorZero == 191 && sensorOne == 251) {
 		  // 4 + 5
 		  triggeredSensors = [3,4]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorZero == 191 && sensorOne == 251) {
+		} else if (sensorZero == 191 && sensorOne == 254) {
 		  // 4 + 6
 		  triggeredSensors = [3,5]
 			io.emit('sensorData', triggeredSensors)
@@ -351,12 +351,12 @@ function getSensorData() {
 		  triggeredSensors = [3,7]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorZero == 191 && sensorTwo == 254) {
+		} else if (sensorZero == 191 && sensorTwo == 251) {
 		  // 4 + 9
 		  triggeredSensors = [3,8]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorZero == 191 && sensorTwo == 251) {
+		} else if (sensorZero == 191 && sensorTwo == 254) {
 		  // 4 + 10
 		  triggeredSensors = [3,9]
 			io.emit('sensorData', triggeredSensors)
@@ -371,12 +371,12 @@ function getSensorData() {
 		  triggeredSensors = [3,11]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorZero == 191 && sensorThree == 254) {
+		} else if (sensorZero == 191 && sensorThree == 251) {
 		  // 4 + 13
 		  triggeredSensors = [3,12]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorZero == 191 && sensorThree == 251) {
+		} else if (sensorZero == 191 && sensorThree == 254) {
 		  // 4 + 14
 		  triggeredSensors = [3,13]
 			io.emit('sensorData', triggeredSensors)
@@ -400,52 +400,52 @@ function getSensorData() {
 		  triggeredSensors = [4,5]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorOne == 238) {
+		} else if (sensorOne == 235) {
 		  // 5 + 7
 		  triggeredSensors = [4,6]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorOne == 190) {
+		} else if (sensorOne == 187) {
 		  // 5 + 8
 		  triggeredSensors = [4,7]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorOne == 254 && sensorTwo == 254) {
+		} else if (sensorOne == 251 && sensorTwo == 251) {
 		  // 5 + 9
 		  triggeredSensors = [4,8]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorOne == 254 && sensorTwo == 251) {
+		} else if (sensorOne == 251 && sensorTwo == 254) {
 		  // 5 + 10
 		  triggeredSensors = [4,9]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorOne == 254 && sensorTwo == 239) {
+		} else if (sensorOne == 251 && sensorTwo == 239) {
 		  // 5 + 11
 		  triggeredSensors = [4,10]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorOne == 254 && sensorTwo == 191) {
+		} else if (sensorOne == 251 && sensorTwo == 191) {
 		  // 5 + 12
 		  triggeredSensors = [4,11]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorOne == 254 && sensorThree == 254) {
+		} else if (sensorOne == 251 && sensorThree == 251) {
 		  // 5 + 13
 		  triggeredSensors = [4,12]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorOne == 254 && sensorThree == 251) {
+		} else if (sensorOne == 251 && sensorThree == 254) {
 		  // 5 + 14
 		  triggeredSensors = [4,13]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorOne == 254 && sensorThree == 239) {
+		} else if (sensorOne == 251 && sensorThree == 239) {
 		  // 5 + 15
 		  triggeredSensors = [4,14]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorOne == 254 && sensorThree == 191) {
+		} else if (sensorOne == 251 && sensorThree == 191) {
 		  // 5 + 16
 		  triggeredSensors = [4,15]
 			io.emit('sensorData', triggeredSensors)
@@ -454,52 +454,52 @@ function getSensorData() {
 
 
 		// Sixth sensor
-		if (sensorOne == 235) {
+		if (sensorOne == 238) {
 		  // 6 + 7
 		  triggeredSensors = [5,6]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorOne == 187) {
+		} else if (sensorOne == 190) {
 		  // 6 + 8
 		  triggeredSensors = [5,7]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorOne == 251 && sensorTwo == 254) {
+		} else if (sensorOne == 254 && sensorTwo == 251) {
 		  // 6 + 9
 		  triggeredSensors = [5,8]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorOne == 251 && sensorTwo == 251) {
+		} else if (sensorOne == 254 && sensorTwo == 254) {
 		  // 6 + 10
 		  triggeredSensors = [5,9]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorOne == 251 && sensorTwo == 239) {
+		} else if (sensorOne == 254 && sensorTwo == 239) {
 		  // 6 + 11
 		  triggeredSensors = [5,10]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorOne == 251 && sensorTwo == 191) {
+		} else if (sensorOne == 254 && sensorTwo == 191) {
 		  // 6 + 12
 		  triggeredSensors = [5,11]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorOne == 251 && sensorThree == 254) {
+		} else if (sensorOne == 254 && sensorThree == 251) {
 		  // 6 + 13
 		  triggeredSensors = [5,12]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorOne == 251 && sensorThree == 251) {
+		} else if (sensorOne == 254 && sensorThree == 254) {
 		  // 6 + 14
 		  triggeredSensors = [5,13]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorOne == 251 && sensorThree == 239) {
+		} else if (sensorOne == 254 && sensorThree == 239) {
 		  // 6 + 15
 		  triggeredSensors = [5,14]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorOne == 251 && sensorThree == 191) {
+		} else if (sensorOne == 254 && sensorThree == 191) {
 		  // 6 + 15
 		  triggeredSensors = [5,15]
 			io.emit('sensorData', triggeredSensors)
@@ -512,12 +512,12 @@ function getSensorData() {
 		  triggeredSensors = [6,7]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorOne == 239 && sensorTwo == 254) {
+		} else if (sensorOne == 239 && sensorTwo == 251) {
 		  // 7 + 9
 		  triggeredSensors = [6,8]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorOne == 239 && sensorTwo == 251) {
+		} else if (sensorOne == 239 && sensorTwo == 254) {
 		  // 7 + 10
 		  triggeredSensors = [6,9]
 			io.emit('sensorData', triggeredSensors)
@@ -532,12 +532,12 @@ function getSensorData() {
 		  triggeredSensors = [6,11]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorOne == 239 && sensorThree == 254) {
+		} else if (sensorOne == 239 && sensorThree == 251) {
 		  // 7 + 13
 		  triggeredSensors = [6,12]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorOne == 239 && sensorThree == 251) {
+		} else if (sensorOne == 239 && sensorThree == 254) {
 		  // 7 + 14
 		  triggeredSensors = [6,13]
 			io.emit('sensorData', triggeredSensors)
@@ -555,12 +555,12 @@ function getSensorData() {
 		}
 
 		//8th sensor
-		if (sensorOne == 191 && sensorTwo == 254) {
+		if (sensorOne == 191 && sensorTwo == 251) {
 		  // 8 + 9
 		  triggeredSensors = [7,8]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorOne == 191 && sensorTwo == 251) {
+		} else if (sensorOne == 191 && sensorTwo == 254) {
 		  // 8 + 10
 		  triggeredSensors = [7,9]
 			io.emit('sensorData', triggeredSensors)
@@ -575,12 +575,12 @@ function getSensorData() {
 		  triggeredSensors = [7,11]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorOne == 191 && sensorThree == 254) {
+		} else if (sensorOne == 191 && sensorThree == 251) {
 		  // 8 + 13
 		  triggeredSensors = [7,12]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorOne == 191 && sensorThree == 251) {
+		} else if (sensorOne == 191 && sensorThree == 254) {
 		  // 8 + 14
 		  triggeredSensors = [7,13]
 			io.emit('sensorData', triggeredSensors)
@@ -603,32 +603,32 @@ function getSensorData() {
 		  triggeredSensors = [8,9]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorTwo == 238) {
+		} else if (sensorTwo == 235) {
 		  // 9 + 11
 		  triggeredSensors = [8,10]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorTwo == 190) {
+		} else if (sensorTwo == 187) {
 		  // 9 + 12
 		  triggeredSensors = [8,11]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorTwo == 254 && sensorThree == 254) {
+		} else if (sensorTwo == 251 && sensorThree == 251) {
 		  // 9 + 13
 		  triggeredSensors = [8,12]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorTwo == 254 && sensorThree == 251) {
+		} else if (sensorTwo == 251 && sensorThree == 254) {
 		  // 9 + 14
 		  triggeredSensors = [8,13]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorTwo == 254 && sensorThree == 239) {
+		} else if (sensorTwo == 251 && sensorThree == 239) {
 		  // 9 + 15
 		  triggeredSensors = [8,14]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorTwo == 254 && sensorThree == 191) {
+		} else if (sensorTwo == 251 && sensorThree == 191) {
 		  // 9 + 16
 		  triggeredSensors = [8,15]
 			io.emit('sensorData', triggeredSensors)
@@ -636,32 +636,32 @@ function getSensorData() {
 		}
 
 		// 10th sensor
-		if (sensorTwo == 235) {
+		if (sensorTwo == 238) {
 		  // 10 + 11
 		  triggeredSensors = [9,10]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorTwo == 187) {
+		} else if (sensorTwo == 190) {
 		  // 10 + 12
 		  triggeredSensors = [9,11]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorTwo == 251 && sensorThree == 254) {
+		} else if (sensorTwo == 254 && sensorThree == 251) {
 		  // 10 + 13
 		  triggeredSensors = [9,12]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorTwo == 251 && sensorThree == 251) {
+		} else if (sensorTwo == 254 && sensorThree == 254) {
 		  // 10 + 14
 		  triggeredSensors = [9,13]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorTwo == 251 && sensorThree == 239) {
+		} else if (sensorTwo == 254 && sensorThree == 239) {
 		  // 10 + 15
 		  triggeredSensors = [9,14]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorTwo == 251 && sensorThree == 191) {
+		} else if (sensorTwo == 254 && sensorThree == 191) {
 		  // 10 + 16
 		  triggeredSensors = [9,15]
 			io.emit('sensorData', triggeredSensors)
@@ -674,12 +674,12 @@ function getSensorData() {
 		  triggeredSensors = [10,11]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorTwo == 239 && sensorThree == 254) {
+		} else if (sensorTwo == 239 && sensorThree == 251) {
 		  // 11 + 13
 		  triggeredSensors = [10,12]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorTwo == 239 && sensorThree == 251) {
+		} else if (sensorTwo == 239 && sensorThree == 254) {
 		  // 11 + 14
 		  triggeredSensors = [10,13]
 			io.emit('sensorData', triggeredSensors)
@@ -698,12 +698,12 @@ function getSensorData() {
 
 
 		// 12th sensor
-		if (sensorTwo == 191 && sensorThree == 254) {
+		if (sensorTwo == 191 && sensorThree == 251) {
 		  // 12 + 13
 		  triggeredSensors = [11,12]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorTwo == 191 && sensorThree == 251) {
+		} else if (sensorTwo == 191 && sensorThree == 254) {
 		  // 12 + 14
 		  triggeredSensors = [11,13]
 			io.emit('sensorData', triggeredSensors)
@@ -726,12 +726,12 @@ function getSensorData() {
 		  triggeredSensors = [12,13]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorThree == 238) {
+		} else if (sensorThree == 235) {
 		  // 13 + 15
 		  triggeredSensors = [12,14]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorThree == 190) {
+		} else if (sensorThree == 187) {
 		  // 13 + 16
 		  triggeredSensors = [12,15]
 			io.emit('sensorData', triggeredSensors)
@@ -739,12 +739,12 @@ function getSensorData() {
 		}
 
 		// 14th sensor
-		if (sensorThree == 235) {
+		if (sensorThree == 238) {
 		  // 14 + 15
 		  triggeredSensors = [13,14]
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
-		} else if (sensorThree == 187) {
+		} else if (sensorThree == 190) {
 		  // 14 + 16
 		  triggeredSensors = [13,15]
 			io.emit('sensorData', triggeredSensors)
