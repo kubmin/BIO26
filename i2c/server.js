@@ -80,11 +80,11 @@ function getNNSelection(indexes) {
 			new_array = new_array.move(secondNewPos, triggeredSensors[1])
 		}
 
-		console.log('old array');
-		console.log(shuffeled_array)
-
-		console.log('new array');
-		console.log(new_array)
+		// console.log('old array');
+		// console.log(shuffeled_array)
+    //
+		// console.log('new array');
+		// console.log(new_array)
 
 
 		images = new_array
@@ -108,6 +108,7 @@ function getSensorData() {
 	sensorThree = i2c.readByteSync(0x24, 0x01)
 
   console.log([sensorZero, sensorOne, sensorTwo, sensorThree])
+  console.log(triggeredSensors)
 
 	if (triggered == false) {
 		// First sensor
@@ -757,7 +758,6 @@ function getSensorData() {
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
 		}
-    console.log(triggeredSensors)
 	}
 
 	// All the sensors are not active
@@ -808,7 +808,7 @@ io.on('connection', (socket) => {
 		// this case the last (3) client.
 		if (counter === 3) {
 			console.log('send');
-			console.log(counter)
+			// console.log(counter)
 			getNNSelection(data)
 			counter = 0
 		} else if (counter < 3) {
