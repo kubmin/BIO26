@@ -757,6 +757,7 @@ function getSensorData() {
 			io.emit('sensorData', triggeredSensors)
 			triggered = true
 		}
+    console.log(triggeredSensors)
 	}
 
 	// All the sensors are not active
