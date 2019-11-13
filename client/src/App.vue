@@ -70,14 +70,14 @@ body {
   height: 100%;
   line-height: 1.2;
   /* padding: 12px */
-  padding: 2em;
+  padding: 2.5em 3em 6em 2.5em;
 
 }
 
 .grid-container {
   display: grid;
   grid-template-columns: repeat(2, calc(50% - 18px));
-  grid-template-rows: repeat(2, calc(50% - 18px));
+  /* grid-template-rows: repeat(2, calc(50% - 18px)); */
   grid-gap: 24px;
   height: 100%;
 }
@@ -123,8 +123,8 @@ body {
 .client-container {
   display: grid;
   grid-template-columns: repeat(2, calc(50% - 12px));
-  grid-template-rows: repeat(2, calc(50% - 30px));
-  grid-gap: 60px 24px;
+  grid-template-rows: repeat(2, calc(50% - 15px));
+  grid-gap: 30px 24px;
   height: 100%;
 }
 
